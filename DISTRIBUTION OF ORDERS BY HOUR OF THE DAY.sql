@@ -1,0 +1,7 @@
+-- DISTRIBUTION OF ORDERS BY HOUR OF THE DAY
+
+SELECT 
+    HOUR(order_time) AS HOURS, COUNT(order_id) AS ORDERS
+FROM
+    orders
+GROUP BY hours;

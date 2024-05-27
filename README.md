@@ -1,7 +1,6 @@
 # SQL Data Analysis for Pizza Sales
 
-#### This repository contains SQL queries to perform data analysis on pizza sales data. The analysis covers various aspects such as order quantities, revenue, pizza preferences, and temporal patterns. Below are the questions addressed in this analysis and the corresponding SQL queries. 
-
+#### This repository contains SQL queries to perform data analysis on pizza sales data. The analysis covers various aspects such as order quantities, revenue, pizza preferences, and temporal patterns.
 
 
 

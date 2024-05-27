@@ -19,7 +19,7 @@
 - [Top 3 Most Ordered Pizza Types Based on Revenue for Each Pizza Category](#Top-3-Most-Ordered-Pizza-Types-Based-on-Revenue-for-Each-Pizza-Category)
 
 ### Data Analysis
-- ####Total Number of Orders Placed
+- #### Total Number of Orders Placed
   
 ```sql
   SELECT 

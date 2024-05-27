@@ -4,6 +4,8 @@
 
 
 ### Table of Contents
+- [Retrieve the Total Number of Orders Placed](#Retrieve-the-Total-Number-of-Orders-Placed)
+- [Calculate the Total Revenue Generated from Pizza Sales](#Calculate-the-Total-Revenue-Generated-from-Pizza-Sales)
 - Retrieve the Total Number of Orders Placed
 - Calculate the Total Revenue Generated from Pizza Sales
 - Identify the Highest-Priced Pizza

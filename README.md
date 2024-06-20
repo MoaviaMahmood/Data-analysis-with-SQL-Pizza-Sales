@@ -79,11 +79,14 @@ order by orders_count desc;
 - Distribution of Orders by Hour of the Day
 
 ```sql
-  SELECT 
-      HOUR(order_time) AS HOURS, COUNT(order_id) AS ORDERS
-  FROM
-      orders
-  GROUP BY hours;
+SELECT 
+    DATEPART(HOUR, order_time) as hours, 
+    COUNT(order_id) AS ORDERS
+FROM
+    orders
+GROUP BY 
+    DATEPART(HOUR, order_time)
+order by hours;
 ```
 
 - Category-wise Distribution of Pizzas

@@ -35,12 +35,15 @@
   LIMIT 1;
 ```
 
-- Most Common Pizza Size Ordered
+- Count of Pizza Size Ordered
 
 ```sql
-  SELECT quantity, COUNT(order_details_id) as ordered
-  FROM orders_details
-  GROUP BY quantity;
+select pizzas.size, count(orders_details.order_details_id) AS orders_count
+from pizzas
+join orders_details
+on pizzas.pizza_id = orders_details.pizza_id
+group by pizzas.size
+order by orders_count desc;
 ```
 
 - Top 5 Most Ordered Pizza Types along with Their Quantities

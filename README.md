@@ -113,18 +113,16 @@ order by hours;
 - Top 3 Most Ordered Pizza Types Based on Revenue
 
 ```sql
-  SELECT 
-      pizza_types.name AS names,
-      ROUND(SUM(orders_details.quantity * pizzas.price),0) AS revenue
-  FROM
-      pizza_types
-          JOIN
-      pizzas ON pizzas.pizza_type_id = pizza_types.pizza_type_id
-          JOIN
-      orders_details ON orders_details.pizza_id = pizzas.pizza_id
-  GROUP BY names
-  ORDER BY revenue DESC
-  LIMIT 3;  
+SELECT 
+    pt.name AS names,
+    ROUND(SUM(od.quantity * p.price), 0) AS revenue
+FROM
+    pizza_types pt
+    JOIN pizzas p ON p.pizza_type_id = pt.pizza_type_id
+    JOIN orders_details od ON od.pizza_id = p.pizza_id
+GROUP BY pt.name
+ORDER BY revenue DESC
+OFFSET 0 ROWS FETCH NEXT 3 ROWS ONLY; 
 ```
 
 - Percentage Contribution of Each Pizza Type to Total Revenue
